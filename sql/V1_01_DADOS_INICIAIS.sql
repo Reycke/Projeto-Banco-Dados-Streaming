@@ -42,3 +42,23 @@ INSERT INTO PLANO (nome_plano, quantidade_acessos, descricao, ativo) VALUES
 ('Plano 19',4,'Plano Família',TRUE),
 ('Plano 20',5,'Plano Especial',TRUE);
 
+-- Campo obrigatório nulo
+INSERT INTO CLIENTE (nome, cpf)
+VALUES (NULL,'99999999999');
+
+-- CPF duplicado
+INSERT INTO CLIENTE (nome, cpf)
+VALUES ('CPF_DUPLICADO','11111111111');
+
+-- Chave estrangeira inexistente
+INSERT INTO ASSINATURA
+(data_inicio,data_vencimento,conexoes_ativas,ultimo_acesso,id_cliente,id_plano,id_status)
+VALUES
+('2026-03-01','2026-04-01',1,'2026-03-01 10:00:00',999,1,1);
+
+-- Login duplicado
+INSERT INTO ADMINISTRADOR
+(nome,login,senha_hash,nivel_acesso)
+VALUES
+('Admin Duplicado','admin1','teste','SUPORTE');
+
