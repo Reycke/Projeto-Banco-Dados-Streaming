@@ -21,3 +21,16 @@ VALUES
 ('Cliente 18','11111111128','64999990018','cliente18@email.com','cliente18','2026-01-18',TRUE),
 ('Cliente 19','11111111129','64999990019','cliente19@email.com','cliente19','2026-01-19',TRUE),
 ('Cliente 20','11111111130','64999990020','cliente20@email.com','cliente20','2026-01-20',TRUE);
+
+
+-- Dados incorretos para Etapa 3
+
+INSERT INTO CLIENTE
+(nome, cpf)
+VALUES
+(NULL,'99999999999');
+
+INSERT INTO CLIENTE
+(nome, cpf)
+VALUES
+('CPF_DUPLICADO','11111111111');
